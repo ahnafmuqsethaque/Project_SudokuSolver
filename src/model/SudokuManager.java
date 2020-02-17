@@ -35,7 +35,7 @@ public class SudokuManager {
     private void checkCombination(int[] board) throws InvalidBoardException {
         for (int i = 0; i < 9; i++) {
             for (int j = i+1; j < 9; j++) {
-                if (board[i] == board[j]) {
+                if (board[i] != 0 && board[i] == board[j]) {
                     throw new InvalidBoardException();
                 }
             }

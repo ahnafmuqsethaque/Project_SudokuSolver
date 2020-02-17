@@ -11,22 +11,10 @@ public class ThrowawayMain {
 
     public static void main(String[] args) {
 
-        inputString.add("000260701");
-        inputString.add("680070090");
-        inputString.add("190004500");
-        inputString.add("820100040");
-        inputString.add("004602900");
-        inputString.add("050003028");
-        inputString.add("009300074");
-        inputString.add("040050036");
-        inputString.add("703018000");
 
-
-        //takeUserInput();
+        takeUserInput();
         insertIntoBoard();
 
-        // write your code here
-        // prev board
         printBoard(sudokuSolver, false);
         //solve board
         sudokuSolver.solvedBoard = sudokuSolver.solveBoard(sudokuSolver.getBoard());
