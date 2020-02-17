@@ -1,8 +1,14 @@
 package ui;
 
+import java.util.ArrayList;
+
 public class SudokuSolver {
 
-    public static void main(String[] args) {
-	// write your code here
+    private ArrayList<ArrayList<Integer>> board;
+    private static final int BOARDWIDTH = 9;
+    private static final int BOARDHEIGHT = 9;
+
+    public SudokuSolver(){
+
     }
 }
