@@ -9,6 +9,7 @@ import java.util.*;
 public class SudokuSolver {
 
     private int[][] board;
+    public int[][] solvedBoard;
     public static final int BOARDWIDTH = 9;
     public static final int BOARDHEIGHT = 9;
     private SudokuManager manager;
@@ -63,5 +64,8 @@ public class SudokuSolver {
 
     public int[][] getBoard() {
         return board;
+    }
+    public int[][] getSolvedBoard() {
+        return solvedBoard;
     }
 }
