@@ -1,14 +1,9 @@
 package com.company;
 
-import model.SudokuManager;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ThrowawayMain {
-    public static void main(String[] args) {
-        SudokuManager manager = new SudokuManager();
-        SudokuSolver sudokuSolver = new SudokuSolver();
-
 
     public static Scanner userInput = new Scanner(System.in);
     public static ArrayList<String> inputString = new ArrayList<>();
