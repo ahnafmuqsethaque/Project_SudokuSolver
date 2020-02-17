@@ -1,7 +1,8 @@
 package com.company;
-//import
+import model.SudokuManager;
 public class ThrowawayMain {
     public static void main(String[] args) {
+        SudokuManager manager = new SudokuManager();
         SudokuSolver sudokuSolver = new SudokuSolver();
 
 
@@ -17,6 +18,7 @@ public class ThrowawayMain {
 
         // write your code here
         printBoard(sudokuSolver);
+
     }
 
     public static void printBoard(SudokuSolver sudokuSolver) {
