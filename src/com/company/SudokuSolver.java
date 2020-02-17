@@ -3,6 +3,8 @@ package com.company;
 import model.SudokuManager;
 
 import java.util.ArrayList;
+import java.util.*;
+
 
 public class SudokuSolver {
 
@@ -11,6 +13,7 @@ public class SudokuSolver {
     public static final int BOARDHEIGHT = 9;
     private SudokuManager manager;
     private ArrayList<int[][]> todo;
+
 
 
     public SudokuSolver(){
@@ -25,6 +28,7 @@ public class SudokuSolver {
             }
         }
     }
+
 
     public int[][] solveBoard(int[][] board) {
         if(manager.isComplete(board)) {
