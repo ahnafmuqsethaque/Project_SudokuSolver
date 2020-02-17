@@ -16,25 +16,10 @@ public class ThrowawayMain {
 
     public static void main(String[] args) {
 
-        //insert bunch of jargon
-//        int k = 1;
-//        for(int row = 0; row < 9; row++) {
-//            for(int col = 0; col < 9; col++) {
-//                sudokuSolver.getBoard()[row][col] = k;
-//                k++;
-//            }
-//            k = 1;
-//
-//        }
 
         takeUserInput();
         insertIntoBoard();
-
-//        for(String s: inputString) {
-//            System.out.println(s);
-//        }
-
-
+        
         // write your code here
         printBoard(sudokuSolver);
 
