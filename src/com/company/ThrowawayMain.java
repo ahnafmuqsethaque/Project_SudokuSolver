@@ -15,9 +15,10 @@ public class ThrowawayMain {
 
         takeUserInput();
         insertIntoBoard();
-        
+
         // write your code here
         printBoard(sudokuSolver);
+
     }
 
     private static void takeUserInput() {
