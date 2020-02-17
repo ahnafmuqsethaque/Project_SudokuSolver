@@ -11,12 +11,27 @@ public class ThrowawayMain {
 
     public static void main(String[] args) {
 
+        inputString.add("000260701");
+        inputString.add("680070090");
+        inputString.add("190004500");
+        inputString.add("820100040");
+        inputString.add("004602900");
+        inputString.add("050003028");
+        inputString.add("009300074");
+        inputString.add("040050036");
+        inputString.add("703018000");
 
-        takeUserInput();
+
+        //takeUserInput();
         insertIntoBoard();
-        
+
         // write your code here
-        printBoard(sudokuSolver);
+        // prev board
+        printBoard(sudokuSolver, false);
+        //solve board
+        sudokuSolver.solvedBoard = sudokuSolver.solveBoard(sudokuSolver.getBoard());
+
+        printBoard(sudokuSolver, true);
 
     }
 
@@ -30,10 +45,12 @@ public class ThrowawayMain {
         }
     }
 
-    public static void printBoard(SudokuSolver sudokuSolver) {
+    public static void printBoard(SudokuSolver sudokuSolver, boolean solved) {
+
 
         printCharacter('_');
         System.out.println("");
+
 
         for(int i = 0; i < sudokuSolver.getBOARDWIDTH(); i++) {
 
@@ -46,9 +63,19 @@ public class ThrowawayMain {
             for(int j = 0; j < sudokuSolver.getBOARDHEIGHT(); j++) {
 
                 if(j % 3 == 0) {
-                    System.out.print(" #| " + sudokuSolver.getBoard()[i][j] + " ");
+                    if(!solved) {
+                        System.out.print(" #| " + sudokuSolver.getBoard()[i][j] + " ");
+                    }else {
+                        System.out.print(" #| " + sudokuSolver.getSolvedBoard()[i][j] + " ");
+                    }
+
                 }else{
-                    System.out.print("| " + sudokuSolver.getBoard()[i][j] + " ");
+                    if(!solved) {
+                        System.out.print("| " + sudokuSolver.getBoard()[i][j] + " ");
+                    }else {
+                        System.out.print("| " + sudokuSolver.getSolvedBoard()[i][j] + " ");
+                    }
+
                 }
 
 
