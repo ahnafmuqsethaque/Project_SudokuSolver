@@ -1,0 +1,1 @@
+SudokuSolver >=1.2; python version >= 2.7

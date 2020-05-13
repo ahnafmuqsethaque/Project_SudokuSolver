@@ -1,0 +1,2907 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+
+    >
+<RelativeLayout
+    android:id="@+id/topRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="10dp"
+
+    tools:context=".SudokuActivity">
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/firstLinLayout"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical">-->
+
+
+<!--        // Entire row-->
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:paddingVertical="10dp">-->
+
+
+<!--            ////// Relativelayout -&ndash;&gt; 3 items row-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingHorizontal="8dp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et00"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et01"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_marginLeft="2dp"-->
+<!--                    android:layout_toRightOf="@+id/et00"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et02"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_toRightOf="@+id/et01"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
+
+<!--            /// end of 3 items-->
+
+<!--            ////// Relativelayout -&ndash;&gt; 3 items row-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingHorizontal="8dp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et03"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et04"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_toRightOf="@+id/et03"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et05"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_toRightOf="@+id/et04"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
+
+<!--            /// end of 3 items-->
+
+<!--            ////// Relativelayout -&ndash;&gt; 3 items row-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingHorizontal="8dp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et06"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et07"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_toRightOf="@+id/et06"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et08"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_toRightOf="@+id/et07"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
+
+<!--            /// end of 3 items-->
+
+
+<!--        </LinearLayout>-->
+
+<!--        // row 2-->
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:paddingVertical="10dp">-->
+
+
+<!--            ////// Relativelayout -&ndash;&gt; 3 items row-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingHorizontal="8dp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et10"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et11"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_marginLeft="2dp"-->
+<!--                    android:layout_toRightOf="@+id/et10"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et12"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_toRightOf="@+id/et11"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
+
+<!--            /// end of 3 items-->
+
+<!--            ////// Relativelayout -&ndash;&gt; 3 items row-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingHorizontal="8dp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et13"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et14"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_toRightOf="@+id/et13"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et15"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_toRightOf="@+id/et14"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
+
+<!--            /// end of 3 items-->
+
+<!--            ////// Relativelayout -&ndash;&gt; 3 items row-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingHorizontal="8dp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et16"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et17"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_toRightOf="@+id/et16"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et18"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_toRightOf="@+id/et17"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
+
+<!--            /// end of 3 items-->
+
+
+<!--        </LinearLayout>-->
+
+
+<!--        /// row 3-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:paddingVertical="10dp">-->
+
+
+<!--            ////// Relativelayout -&ndash;&gt; 3 items row-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingHorizontal="8dp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et20"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et21"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_marginLeft="2dp"-->
+<!--                    android:layout_toRightOf="@+id/et20"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et22"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_toRightOf="@+id/et21"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
+
+<!--            /// end of 3 items-->
+
+<!--            ////// Relativelayout -&ndash;&gt; 3 items row-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingHorizontal="8dp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et23"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et24"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_toRightOf="@+id/et23"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et25"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_toRightOf="@+id/et24"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
+
+<!--            /// end of 3 items-->
+
+<!--            ////// Relativelayout -&ndash;&gt; 3 items row-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingHorizontal="8dp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et26"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et27"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_toRightOf="@+id/et26"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et28"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_toRightOf="@+id/et27"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
+
+<!--            /// end of 3 items-->
+
+
+<!--        </LinearLayout>-->
+
+<!--        //row 4-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:paddingTop="15dp">-->
+
+
+<!--            ////// Relativelayout -&ndash;&gt; 3 items row-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingHorizontal="8dp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et30"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et31"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_marginLeft="2dp"-->
+<!--                    android:layout_toRightOf="@+id/et30"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et32"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_toRightOf="@+id/et31"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
+
+<!--            /// end of 3 items-->
+
+<!--            ////// Relativelayout -&ndash;&gt; 3 items row-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingHorizontal="8dp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et33"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et34"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_toRightOf="@+id/et33"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et35"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_toRightOf="@+id/et34"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
+
+<!--            /// end of 3 items-->
+
+<!--            ////// Relativelayout -&ndash;&gt; 3 items row-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingHorizontal="8dp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et36"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et37"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_toRightOf="@+id/et36"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et38"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_toRightOf="@+id/et37"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
+
+<!--            /// end of 3 items-->
+
+
+<!--        </LinearLayout>-->
+
+<!--        //row 5-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:paddingVertical="10dp">-->
+
+
+<!--            ////// Relativelayout -&ndash;&gt; 3 items row-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingHorizontal="8dp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et40"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et41"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_marginLeft="2dp"-->
+<!--                    android:layout_toRightOf="@+id/et40"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et42"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_toRightOf="@+id/et41"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
+
+<!--            /// end of 3 items-->
+
+<!--            ////// Relativelayout -&ndash;&gt; 3 items row-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingHorizontal="8dp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et43"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et44"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_toRightOf="@+id/et43"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et45"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_toRightOf="@+id/et44"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
+
+<!--            /// end of 3 items-->
+
+<!--            ////// Relativelayout -&ndash;&gt; 3 items row-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingHorizontal="8dp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et46"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et47"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_toRightOf="@+id/et46"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et48"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_toRightOf="@+id/et47"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
+
+<!--            /// end of 3 items-->
+
+
+<!--        </LinearLayout>-->
+
+
+<!--        //row 6-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:paddingVertical="10dp">-->
+
+
+<!--            ////// Relativelayout -&ndash;&gt; 3 items row-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingHorizontal="8dp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et50"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et51"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_marginLeft="2dp"-->
+<!--                    android:layout_toRightOf="@+id/et50"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et52"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_toRightOf="@+id/et51"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
+
+<!--            /// end of 3 items-->
+
+<!--            ////// Relativelayout -&ndash;&gt; 3 items row-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingHorizontal="8dp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et53"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et54"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_toRightOf="@+id/et53"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et55"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_toRightOf="@+id/et54"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
+
+<!--            /// end of 3 items-->
+
+<!--            ////// Relativelayout -&ndash;&gt; 3 items row-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingHorizontal="8dp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et56"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et57"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_toRightOf="@+id/et56"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et58"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_toRightOf="@+id/et57"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
+
+<!--            /// end of 3 items-->
+
+
+<!--        </LinearLayout>-->
+
+
+<!--        // row 7-->
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:paddingVertical="10dp">-->
+
+
+<!--            ////// Relativelayout -&ndash;&gt; 3 items row-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingHorizontal="8dp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et60"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et61"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_marginLeft="2dp"-->
+<!--                    android:layout_toRightOf="@+id/et60"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et62"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_toRightOf="@+id/et61"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
+
+<!--            /// end of 3 items-->
+
+<!--            ////// Relativelayout -&ndash;&gt; 3 items row-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingHorizontal="8dp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et63"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et64"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_toRightOf="@+id/et63"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et65"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_toRightOf="@+id/et64"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
+
+<!--            /// end of 3 items-->
+
+<!--            ////// Relativelayout -&ndash;&gt; 3 items row-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingHorizontal="8dp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et66"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et67"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_toRightOf="@+id/et66"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et68"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_toRightOf="@+id/et67"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
+
+<!--            /// end of 3 items-->
+
+
+<!--        </LinearLayout>-->
+
+<!--        //row 8-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:paddingVertical="10dp">-->
+
+
+<!--            ////// Relativelayout -&ndash;&gt; 3 items row-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingHorizontal="8dp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et70"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et71"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_marginLeft="2dp"-->
+<!--                    android:layout_toRightOf="@+id/et70"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et72"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_toRightOf="@+id/et71"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
+
+<!--            /// end of 3 items-->
+
+<!--            ////// Relativelayout -&ndash;&gt; 3 items row-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingHorizontal="8dp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et73"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et74"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_toRightOf="@+id/et73"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et75"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_toRightOf="@+id/et74"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
+
+<!--            /// end of 3 items-->
+
+<!--            ////// Relativelayout -&ndash;&gt; 3 items row-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingHorizontal="8dp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et76"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et77"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_toRightOf="@+id/et76"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et78"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_toRightOf="@+id/et77"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
+
+<!--            /// end of 3 items-->
+
+
+<!--        </LinearLayout>-->
+
+
+<!--        // row 8-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:paddingVertical="10dp">-->
+
+
+<!--            ////// Relativelayout -&ndash;&gt; 3 items row-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingHorizontal="8dp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et80"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et81"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_marginLeft="2dp"-->
+<!--                    android:layout_toRightOf="@+id/et80"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et82"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_toRightOf="@+id/et81"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
+
+<!--            /// end of 3 items-->
+
+<!--            ////// Relativelayout -&ndash;&gt; 3 items row-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingHorizontal="8dp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et83"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et84"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_toRightOf="@+id/et83"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et85"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_toRightOf="@+id/et84"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
+
+<!--            /// end of 3 items-->
+
+<!--            ////// Relativelayout -&ndash;&gt; 3 items row-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingHorizontal="8dp">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et86"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et87"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_toRightOf="@+id/et86"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et88"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_toRightOf="@+id/et87"-->
+<!--                    android:background="@drawable/roundedgesborder"-->
+<!--                    android:ems="10"-->
+<!--                    android:inputType="numberSigned"-->
+<!--                    android:paddingHorizontal="5dp"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#ff0000"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </RelativeLayout>-->
+
+<!--            /// end of 3 items-->
+
+
+<!--        </LinearLayout>-->
+
+
+
+
+<!--    </LinearLayout>-->
+    <LinearLayout
+        android:id="@+id/firstLinLayout"
+        android:paddingTop="8dp"
+        android:paddingBottom="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+
+        // Entire row
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingTop="2dp">
+
+
+            ////// Relativelayout ---> 3 items row
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp">
+
+                <EditText
+                    android:id="@+id/et00"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et01"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@+id/et00"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et02"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@+id/et01"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            /// end of 3 items
+
+            ////// Relativelayout ---> 3 items row
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp">
+
+                <EditText
+                    android:id="@+id/et03"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et04"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@+id/et03"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et05"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@+id/et04"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            /// end of 3 items
+
+            ////// Relativelayout ---> 3 items row
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp">
+
+                <EditText
+                    android:id="@+id/et06"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et07"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@+id/et06"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et08"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@+id/et07"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            /// end of 3 items
+
+
+        </LinearLayout>
+
+        // row 2
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="2dp">
+
+
+            ////// Relativelayout ---> 3 items row
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp">
+
+                <EditText
+                    android:id="@+id/et10"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et11"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@+id/et10"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et12"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/et11"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            /// end of 3 items
+
+            ////// Relativelayout ---> 3 items row
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp">
+
+                <EditText
+                    android:id="@+id/et13"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et14"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_toRightOf="@+id/et13"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et15"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/et14"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            /// end of 3 items
+
+            ////// Relativelayout ---> 3 items row
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp">
+
+                <EditText
+                    android:id="@+id/et16"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et17"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_toRightOf="@+id/et16"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et18"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/et17"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            /// end of 3 items
+
+
+        </LinearLayout>
+
+
+        /// row 3
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="2dp">
+
+
+            ////// Relativelayout ---> 3 items row
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp">
+
+                <EditText
+                    android:id="@+id/et20"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et21"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@+id/et20"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et22"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/et21"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            /// end of 3 items
+
+            ////// Relativelayout ---> 3 items row
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp">
+
+                <EditText
+                    android:id="@+id/et23"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et24"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_toRightOf="@+id/et23"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et25"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/et24"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            /// end of 3 items
+
+            ////// Relativelayout ---> 3 items row
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp">
+
+                <EditText
+                    android:id="@+id/et26"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et27"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_toRightOf="@+id/et26"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et28"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/et27"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            /// end of 3 items
+
+
+        </LinearLayout>
+
+        //row 4
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="12dp">
+
+
+            ////// Relativelayout ---> 3 items row
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp">
+
+                <EditText
+                    android:id="@+id/et30"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et31"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@+id/et30"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et32"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/et31"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            /// end of 3 items
+
+            ////// Relativelayout ---> 3 items row
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp">
+
+                <EditText
+                    android:id="@+id/et33"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et34"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_toRightOf="@+id/et33"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et35"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/et34"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            /// end of 3 items
+
+            ////// Relativelayout ---> 3 items row
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp">
+
+                <EditText
+                    android:id="@+id/et36"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et37"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_toRightOf="@+id/et36"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et38"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/et37"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            /// end of 3 items
+
+
+        </LinearLayout>
+
+        //row 5
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="2dp">
+
+
+            ////// Relativelayout ---> 3 items row
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp">
+
+                <EditText
+                    android:id="@+id/et40"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et41"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@+id/et40"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et42"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/et41"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            /// end of 3 items
+
+            ////// Relativelayout ---> 3 items row
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp">
+
+                <EditText
+                    android:id="@+id/et43"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et44"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_toRightOf="@+id/et43"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et45"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/et44"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            /// end of 3 items
+
+            ////// Relativelayout ---> 3 items row
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp">
+
+                <EditText
+                    android:id="@+id/et46"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et47"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_toRightOf="@+id/et46"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et48"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/et47"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            /// end of 3 items
+
+
+        </LinearLayout>
+
+
+        //row 6
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="2dp">
+
+
+            ////// Relativelayout ---> 3 items row
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp">
+
+                <EditText
+                    android:id="@+id/et50"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et51"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@+id/et50"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et52"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/et51"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            /// end of 3 items
+
+            ////// Relativelayout ---> 3 items row
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp">
+
+                <EditText
+                    android:id="@+id/et53"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et54"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_toRightOf="@+id/et53"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et55"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/et54"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            /// end of 3 items
+
+            ////// Relativelayout ---> 3 items row
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp">
+
+                <EditText
+                    android:id="@+id/et56"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et57"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_toRightOf="@+id/et56"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et58"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/et57"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            /// end of 3 items
+
+
+        </LinearLayout>
+
+
+        // row 7
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="12dp">
+
+
+            ////// Relativelayout ---> 3 items row
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp">
+
+                <EditText
+                    android:id="@+id/et60"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et61"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@+id/et60"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et62"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/et61"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            /// end of 3 items
+
+            ////// Relativelayout ---> 3 items row
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp">
+
+                <EditText
+                    android:id="@+id/et63"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et64"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_toRightOf="@+id/et63"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et65"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/et64"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            /// end of 3 items
+
+            ////// Relativelayout ---> 3 items row
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp">
+
+                <EditText
+                    android:id="@+id/et66"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et67"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_toRightOf="@+id/et66"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et68"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/et67"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            /// end of 3 items
+
+
+        </LinearLayout>
+
+        //row 8
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="2dp">
+
+
+            ////// Relativelayout ---> 3 items row
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp">
+
+                <EditText
+                    android:id="@+id/et70"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et71"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@+id/et70"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et72"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/et71"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            /// end of 3 items
+
+            ////// Relativelayout ---> 3 items row
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp">
+
+                <EditText
+                    android:id="@+id/et73"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et74"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_toRightOf="@+id/et73"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et75"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/et74"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            /// end of 3 items
+
+            ////// Relativelayout ---> 3 items row
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp">
+
+                <EditText
+                    android:id="@+id/et76"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et77"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_toRightOf="@+id/et76"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et78"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/et77"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            /// end of 3 items
+
+
+        </LinearLayout>
+
+
+        // row 8
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="2dp">
+
+
+            ////// Relativelayout ---> 3 items row
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp">
+
+                <EditText
+                    android:id="@+id/et80"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et81"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@+id/et80"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et82"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/et81"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            /// end of 3 items
+
+            ////// Relativelayout ---> 3 items row
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp">
+
+                <EditText
+                    android:id="@+id/et83"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et84"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_toRightOf="@+id/et83"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et85"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/et84"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            /// end of 3 items
+
+            ////// Relativelayout ---> 3 items row
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp">
+
+                <EditText
+                    android:id="@+id/et86"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et87"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_toRightOf="@+id/et86"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et88"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/et87"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/roundedgesborder"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:paddingHorizontal="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            /// end of 3 items
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_below="@+id/firstLinLayout"
+    android:paddingTop="20dp"
+    android:layout_centerHorizontal="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp">
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:paddingVertical="10dp"
+        android:shadowColor="#1d4e46"
+        android:text="Submit" />
+    <Button
+        android:id="@+id/resetButton"
+        android:paddingVertical="10dp"
+        android:shadowColor="#1d4e46"
+        android:layout_marginHorizontal="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset" />
+
+</LinearLayout>
+
+
+
+</RelativeLayout>
+
+</ScrollView>

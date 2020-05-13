@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/sudokuSovlerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sudoku Solver"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:fontFamily="casual"
+        android:textSize="30dp"/>
+
+    <Button
+        android:id="@+id/letssolve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/sudokuSovlerText"
+        android:text="Let's Solve"
+        android:textSize="25dp"
+        android:textAllCaps="false">
+
+    </Button>
+
+    <Button
+        android:id="@+id/tutorial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/letssolve"
+        android:text="How it Works?"
+        android:textSize="25dp"
+        android:textAllCaps="false">
+
+    </Button>
+</RelativeLayout>
